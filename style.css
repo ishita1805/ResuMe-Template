@@ -1,23 +1,13 @@
 /* Overall */
 :root {
-   --bg-purple:#020710;
-   --nav-active-purple:#806E9C;
-   --skills-purple:#F7F2FF;
-   --text-purple:#593B8A;
-   --text-bold-purple:#351f59;
-   --border-purple:#E7DAFC;
-   --ed-purple:#E9DCFF;
-   --nav-border-purple:rgb(41, 28, 48);
-
-   --bg-orange:#0E0500;
-   --nav-active-orange:#FFAD80;
-   --skills-orange:#FDEBE1;
-   --text-orange:#B95F2D;
-
-   --bg-blue:#000511;
-   --nav-active-blue:#6FB1FF;
-   --skills-blue:#EAF5FF;
-   --text-blue:#456FA0;
+   --bg:#020710;
+   --nav-active:#806E9C;
+   --skills:#F7F2FF;
+   --text:#593B8A;
+   --text-bold:#351f59;
+   --border:#E7DAFC;
+   --ed:#E9DCFF;
+   --nav-border:#291c30;
 }
 .column {
     margin-top:5vh;
@@ -37,14 +27,14 @@ body{
 }
 ::-webkit-scrollbar{
     width:7px;
-    background:var(--bg-purple);
+    background:var(--bg);
 }
 ::-webkit-scrollbar-thumb{
-    background:var(--nav-active-purple);
+    background:var(--nav-active);
 }
 /* Navbar Styles */
 .nav-custom-bg{
-    background:var(--bg-purple);
+    background:var(--bg);
     padding:1.5vh 3vw !important;
     font-family: 'Montserrat';
 }
@@ -66,7 +56,7 @@ body{
     font-size:15px;
 }
 .nav li.active a{
-    color:var(--nav-active-purple) !important;
+    color:var(--nav-active) !important;
     transition: 0.5s;
     font-weight:600;
 }
@@ -97,14 +87,14 @@ body{
     padding:5vh 5vw;
     display:flex;
     flex-direction:row;
-    background:var(--bg-purple);
+    background:var(--bg);
     color:white;
     justify-content:space-between;
     align-items: center;
 }
 #home p{
     font-size:22px;
-    color:var(--nav-active-purple);
+    color:var(--nav-active);
     font-weight:600;
 }
 #home h1{
@@ -147,7 +137,7 @@ body{
 }
 /* Education */
 .education{
-    background:var(--ed-purple);
+    background:var(--ed);
     width:100vw;
     padding:5vh 5vw;
     padding-bottom:1vh;
@@ -159,7 +149,7 @@ body{
 }
 .education-cont{
     margin:2vh 0;
-    border-left:var(--text-purple) solid 5px;
+    border-left:var(--text) solid 5px;
     padding:0 2vh;
 }
 .education-cont h3{
@@ -171,7 +161,7 @@ body{
 }
 /* Certification */
 .certification{
-    background:var(--ed-purple);
+    background:var(--ed);
     width:100vw;
     padding:5vh 5vw;
     padding-top:0;
@@ -187,7 +177,7 @@ body{
     padding:8vh 5vw;
     display:flex;
     flex-direction:column;
-    background:var(--skills-purple);
+    background:var(--skills);
     color:black;
     justify-content:flex-start;
     align-items: flex-start; 
@@ -276,12 +266,12 @@ body{
     font-weight:500;
 }
 #experiences b{
-  color: var(--text-bold-purple);
+  color: var(--text-bold);
   margin:0.5vh 0;
   font-weight:600;
 }
 #experiences p{
-    color: var(--text-purple);
+    color: var(--text);
     margin:0.2vh 0;
     font-weight:500;
 }
@@ -303,12 +293,12 @@ body{
     font-weight:500;
 }
 #volunteering b{
-  color: var(--text-bold-purple);
+  color: var(--text-bold);
   margin:0.5vh 0;
   font-weight:600;
 }
 #volunteering p{
-    color: var(--text-purple);
+    color: var(--text);
     margin:0.2vh 0;
     font-weight:500;
 }
@@ -321,7 +311,7 @@ body{
     padding:8vh 5vw;
     display:flex;
     flex-direction:column;
-    background:var(--bg-purple);
+    background:var(--bg);
     color:white;
     justify-content:flex-start;
     align-items: flex-start;  
@@ -343,7 +333,7 @@ body{
     flex-direction:column;
     align-items: flex-start;
     justify-content: space-between;
-    border:solid 1px var(--border-purple);
+    border:solid 1px var(--border);
 }
 .project-card b{
     font-size:18px;
@@ -370,7 +360,7 @@ body{
     padding:5px 10px;
     border-radius:20px;
     color:white;
-    background:var(--text-bold-purple);
+    background:var(--text-bold);
 }
 .project-card-footer{
     display:flex;
@@ -388,7 +378,7 @@ body{
     margin-right:20px;
 }
 .project-text{
-    color:var(--nav-active-purple);
+    color:var(--nav-active);
 }
 /* Footer */
 footer{
@@ -430,7 +420,7 @@ footer span{
 
 @media screen and (max-width:770px){
     .nav-custom-bg{
-        border-bottom:2px solid var(--nav-border-purple);
+        border-bottom:2px solid var(--nav-border);
     }
 }
 @media (max-width:767px) {

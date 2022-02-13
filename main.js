@@ -24,8 +24,45 @@ var projectsMain = $('#projects')
 fetch('data.json')
 .then(response=>response.json())
 .then((result)=>{
-    // append data to html
 
+    let root = document.documentElement;
+    // get theme
+    theme = result['theme'];
+    // set colour
+    if (theme === 'blue') {
+        // blue theme
+        root.style.setProperty('--bg', '#000511');
+        root.style.setProperty('--nav-active', '#6FB1FF');
+        root.style.setProperty('--skills', '#EAF5FF');
+        root.style.setProperty('--text', '#456FA0');
+        root.style.setProperty('--text-bold', '#1b4575');
+        root.style.setProperty('--border', '#8ac0ff');
+        root.style.setProperty('--ed', '#bddbff');
+        root.style.setProperty('--nav-border', '#012d61');
+
+    } else if (theme === 'orange') {
+        root.style.setProperty('--bg', '#120700');
+        root.style.setProperty('--nav-active', '#FFAD80');
+        root.style.setProperty('--skills', '#FDEBE1');
+        root.style.setProperty('--text', '#B95F2D');
+        root.style.setProperty('--text-bold', '#703616');
+        root.style.setProperty('--border', '#ffdcc9');
+        root.style.setProperty('--ed', '#ffc6a6');
+        root.style.setProperty('--nav-border', '#541e00');
+        // orange theme
+    }
+    // set images
+    let img1 = document.getElementById('img-1')
+    let img2 = document.getElementById('img-2')
+    if (theme === 'blue') {
+        img1.src = 'assets/landing-blue.svg'
+        img2.src = 'assets/work-blue.svg'
+    } else if (theme === 'orange') {
+        img1.src = 'assets/landing-orange.svg'
+        img2.src = 'assets/work-orange.svg'
+    }
+    
+    // append data to html
     // user profile data
     user_name.text('I am '+result['profile']['name'])
     user_tag.text(result['profile']['headline']+' from '+result['profile']['location'])
